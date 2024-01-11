@@ -21,7 +21,7 @@ import AppLayout from './ui/AppLayout';
 
 // Create a client
 const queryClient = new QueryClient({
-  defaultOptions: { queries: { staleTime: 6 * 1000 } },
+  defaultOptions: { queries: { staleTime: 0 } },
 });
 
 export default function App() {
