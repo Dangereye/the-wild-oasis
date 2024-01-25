@@ -1,6 +1,3 @@
-// Styled components
-import styled from 'styled-components';
-
 // Hooks
 import { useCabins } from './useCabins';
 
