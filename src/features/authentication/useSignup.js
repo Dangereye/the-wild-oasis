@@ -16,5 +16,6 @@ export function useSignup() {
       );
     },
   });
+
   return { signup, isLoading };
 }
