@@ -10,7 +10,7 @@ import { subDays } from 'date-fns';
 // Services
 import { getStaysAfterDate } from '../../services/apiBookings';
 
-export function useRecentStayss() {
+export function useRecentStays() {
   const [searchParams] = useSearchParams();
   const numDays = !searchParams.get('last')
     ? 7
@@ -29,5 +29,5 @@ export function useRecentStayss() {
     (stay) => stay.status === 'checked-in' || stay.status === 'checked-out'
   );
 
-  return { stays, isLoading, error, confirmedStays };
+  return { stays, isLoading, error, confirmedStays, numDays };
 }
