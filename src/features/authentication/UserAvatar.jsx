@@ -26,9 +26,8 @@ const Avatar = styled.img`
 
 export default function UserAvatar() {
   const { user } = useUser();
-
-  const fullName = user?.user_metadata?.fullname || 'Guest';
-  const avatar = user?.user_metadata?.avatar || 'default-user.jpg';
+  const { fullName = 'Guest', avatar = 'default-user.jpg' } =
+    user?.user_metadata || {};
 
   return (
     <StyledUserAvatar>
